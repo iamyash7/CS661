@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- insert the HTML code for your visualization here -->
+{{ visualization_html }}
+<header>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('team') }}">Our Team</a></li>
+      </ul>
+    </nav>
+  </header>
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ the_title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var typingText = document.getElementById('typing-text');
+    var textToType = 'The primary goal of this website is to provide a visualization of brain tumor segmentation. By using advanced image processing techniques, the website is able to identify and isolate brain tumors from other tissue in medical images, providing a clearer and more detailed picture of the tumor. This visualization can be used by medical professionals to better understand the size, shape, and location of the tumor, which can in turn help guide treatment decisions. ';
+    var typingSpeed =10;
+    var currentCharIndex = 0;
+
+    var typingInterval = setInterval(function() {
+      var currentText = typingText.innerHTML;
+      currentText += textToType[currentCharIndex];
+      typingText.innerHTML = currentText;
+      currentCharIndex++;
+
+      if (currentCharIndex >= textToType.length) {
+        clearInterval(typingInterval);
+      }
+    }, typingSpeed);
+  });
+	</script>
+</head>
+
+<body>
+
+<div id="container">
+  
+
+  <!-- Jinja2 directives: page contents will go between them -->
+  {% block body %}
+  {% endblock %}
+
+</div>
+
+</body>
+</html>

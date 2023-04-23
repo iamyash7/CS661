@@ -1,0 +1,104 @@
+body {
+  background-image: url('/static/images/BT.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}header {
+  background-color: #fff;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #008080;
+
+}
+
+nav a:hover:before {
+  width: 100%;
+}
+#typing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: White;
+  font-size: 28px;
+  font-weight: bold;
+}
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.member {
+  text-align: center;
+  margin: 20px;
+}
+
+.member img {
+  border-radius: 100%;
+  width: 210px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.member h3 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: White;
+}
+
+.member p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.member a {
+  color: White;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.member a:hover {
+  color: #000000;
+}
